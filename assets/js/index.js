@@ -7,7 +7,7 @@ const startVideo = () => {
           devices.forEach(device => {
               if (device.kind == 'videoinput') {
                   if (device.kind.includes('videoinput')) {
-                      navigator.getUserMedia(
+                      navigator.mediaDevices.getUserMedia(
                           { video : {
                               deviceId : device.deviceId
                           }},
